@@ -46,7 +46,7 @@ matplotlib>=3.5.0
 - **Memory**: 8GB+ RAM for batch processing
 
 ### Data
-- **Input**: `df_segment2.csv` (601 columns: 600 ECG features + 1 binary label)
+- **Input**:
   - Supports both `.csv` and `.csv.zip` formats
   - Expected format: 600 numerical features per row, last column is binary label (0/1)
 
@@ -94,20 +94,13 @@ TUNING_MODE = True  # Set to True to run grid search before main training
 ```
 
 ### Custom Data Path
-
-```python
-csv_path = "/path/to/your/df_segment2.csv"
-```
-
 ## Project Structure
 
 ```
 ├── bnair_lab3-1.py          # Main training script
 ├── README.md                # This file
-├── requirements.txt         # Python dependencies
 │
 ├── data/                    # Input data directory
-│   └── df_segment2.csv      # ECG dataset (601 columns)
 │
 ├── plots/                   # Output visualizations
 │   ├── training_curves/     # Per-model loss/accuracy curves
